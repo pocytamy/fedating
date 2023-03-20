@@ -1,0 +1,43 @@
+<button routerLink="/newfeed">Find Love</button>
+<form [formGroup]="formCreate" (ngSubmit)="processFile(imageInput)">
+<label class="image-upload-container btn btn-bwm">
+  <span>Select Image</span>
+  <input #imageInput
+         type="file"
+         accept="image/*" (change)="onFileChange($event)">
+</label>
+  <input formControlName="id" hidden >
+  <input hidden formControlName="avatar">
+<div class="container rounded bg-white mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-3 border-right">
+      <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" [src]="src"><br><span class="font-weight-bold"> nick name: </span><span class="text-black-50">nick name here</span><span> </span></div>
+    </div>
+    <div class="col-md-5 border-right">
+      <div class="p-3 py-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="text-right">Profile Settings</h4>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6"><label class="labels">Nick Name:</label><br><input type="text" class="form-control" placeholder="Nick Name" formControlName="nickName"></div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6"><label class="labels">Gender:</label><br><select type="text" class="form-control" placeholder="Gender" formControlName="gender">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">None</option>
+          </select></div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-md-6"><label class="labels">Age:</label><br><input type="text" class="form-control"  placeholder="Age" formControlName="age"></div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-12"><label class="labels">Bio:</label><br><input type="text" class="form-control" placeholder="Bio" formControlName="bio"></div>
+        </div>
+        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save Profile</button><button routerLink="/home">Back</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+

@@ -1,0 +1,21 @@
+<button routerLink="/home">My Profile</button>
+<button (click)="logout()">log out</button>
+<div class="card">
+  <div class="card__img">
+    <img src="{{profile.avatar}}" style="width: 50%;height: 500px" alt="nhan">
+  </div>
+  <div class="card__name">
+    <h2>{{profile.nickName}}</h2>
+  </div>
+  <div class="card--age">
+    <h2>{{profile.age}}</h2>
+  </div>
+  <div class="card--age">
+    <h2>{{profile.bio}}</h2>
+  </div>
+  <div class="card__btn">
+    <button class="card__btn-contact">Like</button>
+  </div>
+</div>
+  <button *ngIf="checkBack()" (click)="back()">back</button>
+  <button *ngIf="checkNext()" (click)="next()">next</button>

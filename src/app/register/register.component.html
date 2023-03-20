@@ -1,0 +1,19 @@
+<form [formGroup]="formCreateAccount" (ngSubmit)="createAccount()">
+<div  class="container">
+  <p class="heading">Register</p>
+  <div class="box">
+    <p>Username</p>
+    <div> <input type="text" autocomplete="off" placeholder="Enter your username" formControlName="userName"> </div>
+  </div>
+  <div class="box">
+    <p>Password</p>
+    <div> <input type="password" autocomplete="off" placeholder="Enter your password" formControlName="password"  required> </div>
+  </div>
+  <div class="box">
+    <p>Phonenumber</p>
+    <div> <input type="text" autocomplete="off" placeholder="Enter your phonenumber" formControlName="number"> </div>
+  </div>
+  <button type="submit" class="loginBtn" >Register</button>
+  <p class="text">Don't have an account? <a routerLink="">Sign in</a></p>
+</div>
+</form>
